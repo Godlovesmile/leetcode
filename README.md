@@ -5,7 +5,19 @@
 [LeetCode个人主页]()
 
 ## 目录
+按照题目分类进行刷题
+### 一. 数组
 
-| index |       title            | code           |  Difficulty   |
-| :--:  | :-------------------:  | :---:          |  :--:         |
-| 0001 | Two Sum | [JavaScript](./src/0001.two-sum) [TypeScript](./src/0001.two-sum) | Easy  |
+| 题目分类 | 题目索引 |
+| :--:  | :-------------------:  |
+| 数组的遍历 | [485-最大连续1的个数(简单)](./src/001.Array/485.MaxConsecutiveOnes)、[495]()、[414]()、[628]() |
+
+### 二. 字符串
+
+### 三. 数与位
+
+### 四. 栈与递归
+
+### vscode leetcode 相关插件设置
+
+1. leetcode.workspaceFolder, 自动代码路径设置

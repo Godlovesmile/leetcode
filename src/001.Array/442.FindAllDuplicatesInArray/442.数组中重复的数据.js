@@ -10,9 +10,19 @@
  * @return {number[]}
  */
 var findDuplicates = function (nums) {
-	nums = nums.filter((n, i) => {
-		return nums.lastIndexOf(n) > i && nums.lastIndexOf(n) > 0;
-	});
-	return nums.sort((a, b) => a - b);
+	let targets = new Array(nums.length).fill(0);
+	let res = [];
+
+	for (let i = 0; i < nums.length; i++) {
+		const j = nums[i] - 1;
+
+		if (!targets[j]) {
+			targets[j] = 1;
+			continue;
+		}
+		res.push(nums[i]);
+	}
+
+	return res;
 };
 // @lc code=end

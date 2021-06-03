@@ -19,7 +19,7 @@ tips: 在刷题过程中, 需要用到对应的算法, 来这儿看基础例子�
 | 数组的遍历 | [485-最大连续1的个数(简单)](./src/001.Array/485.MaxConsecutiveOnes)、[495-提莫攻击(简单)](./src/001.Array/495.TeemoAttacking)、[414]()、[628]() |
 | 统计数组中的元素 | 645、697、448、[442-数组中重复数据(中等)](./src/001.Array/442.FindAllDuplicatesInArray)、41、274 |
 | 数组的改变、移动 | [453-最小操作次数是数组元素相等(简单)](./src/001.Array/453.MinimumMovesToEqualArrayElements)、665、283 |
-| 二维数组及滚动数组 | 118、119、661、598、419 |
+| 二维数组及滚动数组 | [118-杨辉三角(简单)](./src/001.Array/118.PascalsTriangle)、119、661、598、419 |
 | 数组的旋转 | 189、396 |
 | 特定顺序遍历二维数组 | [54-螺旋矩阵(中等)](./src/001.Array/054.SpiralMatrix)、[59-螺旋矩阵-ii(中等)](./src/001.Array/059.SpiralMatrixII)、498 |
 | 二维数组变换 | 566、48、73、289 |

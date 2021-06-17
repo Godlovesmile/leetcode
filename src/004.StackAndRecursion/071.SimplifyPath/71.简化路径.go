@@ -5,6 +5,7 @@
  */
 
 // @lc code=start
+/*
 func simplifyPath(path string) string {
 	var stack []string
 	pathArr := strings.Split(path, "/")
@@ -18,6 +19,14 @@ func simplifyPath(path string) string {
 	}
 
 	return "/" + strings.Join(stack, "/")
+}
+*/
+import (
+	path2 "path"
+)
+
+func simplifyPath(path string) string {
+	return path2.Clean(path)
 }
 
 // @lc code=end

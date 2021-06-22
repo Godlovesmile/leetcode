@@ -6,18 +6,32 @@
 
 // @lc code=start
 func evalRPN(tokens []string) int {
-	var stacks []string
+	stacks := []int{}
 
 	for _, v := range tokens {
-		switch v {
-		case "+":
-		case "-":
-		case "*":
-		case "/":
-		default:
-			stacks = append(stacks, v)
+		val, err := strconv.Atoi(v)
+
+		if err == nil {
+			stacks = append(stacks, val)
+		} else {
+			num1, num2 := stacks[len(stacks)-2], stacks[len(stacks)-1]
+			stacks = stacks[:len(stacks)-2]
+
+			switch v {
+			case "+":
+				stacks = append(stacks, num1+num2)
+			case "-":
+				stacks = append(stacks, num1-num2)
+			case "*":
+				stacks = append(stacks, num1*num2)
+			default:
+				stacks = append(stacks, num1/num2)
+			}
+
 		}
 	}
+
+	return stacks[0]
 }
 
 // @lc code=end

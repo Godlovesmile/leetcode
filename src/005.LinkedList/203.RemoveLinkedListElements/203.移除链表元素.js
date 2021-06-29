@@ -29,7 +29,6 @@ var removeElements = function(head, val) {
             temp = temp.next;
         }
     }
-    console.log(mockHead);
     return mockHead.next
 };
 // @lc code=end

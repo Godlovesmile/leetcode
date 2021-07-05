@@ -31,7 +31,7 @@ tips: 在刷题过程中, 需要用到对应的算法, 来这儿看基础例子�
 | :--:  | :-------:  |
 | 字符 | [520-检测大写字母(简单)](./src/002.String/520.DetectCapital) |
 | 回文串的定义 | [125-验证回文串(简单)](./src/002.String/125.ValidPalindrome) |
-| 公共前缀 | 14 |
+| 公共前缀 | [14-最长公共前缀(简单)](./src/002.String/14.LongestCommonPrefix) |
 | 单词 | [434-字符串中的单词数(简单)](./src/002.String/434.NumberOfSegmentsInString)、58 |
 | 字符串的反转 | 344、541、557、151 |
 | 字符的统计 |	[387-字符串中的第一个唯一字符(简单)](./src/002.String/387.FirstUniqueCharacterInString)、389、383、242、49、451、423、657、551、696、467、535 |

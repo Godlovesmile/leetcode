@@ -34,7 +34,7 @@ tips: 在刷题过程中, 需要用到对应的算法, 来这儿看基础例子�
 | 公共前缀 | [14-最长公共前缀(简单)](./src/002.String/14.LongestCommonPrefix) |
 | 单词 | [434-字符串中的单词数(简单)](./src/002.String/434.NumberOfSegmentsInString)、[58-最后一个单词的长度](./src/002.String/058.LengthOfLastWord) |
 | 字符串的反转 | [344-反转字符串(简单)](./src/002.String/344.ReverseString)、[541-反转字符串2(简单)](./src/002.String/541.ReverseStringII)、[557-反转字符串中的单词III(简单)](./src/002.String/557.ReverseWordsInAStringIII)、[151-翻转字符串里的单词(中等)](./src/002.String/151.ReverseWordsInAString) |
-| 字符的统计 |	[387-字符串中的第一个唯一字符(简单)](./src/002.String/387.FirstUniqueCharacterInString)、[389-找不同(简单)](./src/002.String/389.FindTheDifference)、383、242、49、451、423、657、551、696、467、535 |
+| 字符的统计 |	[387-字符串中的第一个唯一字符(简单)](./src/002.String/387.FirstUniqueCharacterInString)、[389-找不同(简单)](./src/002.String/389.FindTheDifference)、[383-赎金信(简单)](./src/002.String/383.RansomNote)、242、49、451、423、657、551、696、467、535 |
 | 数字与字符串间转换 |	[299-猜数字游戏(中等)](./src/002.String/299.BullsAndCows)、412、506、539、553、537、592、640、38、443、8、13、12、[273-整数转换英文表示(困难)]、165、481 |
 | 子序列 |	392、524、521、522 |
 | 高精度运算 |	66、67、415、43、306 |

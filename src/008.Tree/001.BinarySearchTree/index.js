@@ -21,6 +21,18 @@ function BinarySearchTree() {
     this.inOrderTraverse = function(callback) {
         _inOrderTraverse(root, callback);
     }
+
+    this.min = function() {
+        return _minNode(root);
+    }
+
+    this.max = function() {
+        return _maxNode(root);
+    }
+
+    this.search = function(key) {
+        return _searchNode(root, key);
+    }
 }
 
 function _insertNode(root, newNode) {
@@ -49,6 +61,40 @@ function _inOrderTraverse(node, callback) {
     }
 }
 
+function _minNode(node) {
+    if (node) {
+        while(node && node.left !== null) {
+            node = node.left;
+        }
+        return node.key;
+    }
+
+    return null;
+}
+
+function _maxNode(node) {
+    if (node) {
+        while(node && node.right !== null) {
+            node = node.right;
+        }
+        return node.key;
+    }
+    return null;
+}
+
+function _searchNode(node, key) {
+    if (node == null) {
+        return false;
+    }
+    if (key < node.key) {
+        return _searchNode(node.left, key);
+    } else if (key > node.key) {
+        return _searchNode(node.right, key);
+    } else {
+        return true;
+    }
+}
+
 const tree = new BinarySearchTree();
 tree.insert(11);
 tree.insert(7);
@@ -63,4 +109,8 @@ function printNodeKey(value) {
     console.log('[node key]', value);
 }
 
-tree.inOrderTraverse(printNodeKey);
+// tree.inOrderTraverse(printNodeKey);
+
+console.log(tree.min());
+console.log(tree.max());
+console.log(tree.search(17));

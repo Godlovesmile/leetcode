@@ -33,6 +33,10 @@ function BinarySearchTree() {
     this.search = function(key) {
         return _searchNode(root, key);
     }
+
+    this.romove = function(key) {
+        root = _removeNode(root, key);
+    }
 }
 
 function _insertNode(root, newNode) {
@@ -95,6 +99,53 @@ function _searchNode(node, key) {
     }
 }
 
+function _removeNode(node, key) {
+    if (node == null) {
+        return null;
+    }
+    if (key < node.key) {
+        node.left = _removeNode(node.left, key);
+        return node;
+    } else if (key > node.key) {
+        node.right = _removeNode(node.right, key);
+        return node;
+    } else {
+        // 找到 key 相同的 node, 即需要进行删除的 node
+        // 需要删除的 node, 分为三种情况
+        // 第一种情况---一个叶子节点
+        if (node.left == null && node.right == null) {
+            node = null;
+            return node;
+        }
+        // 第二种情况---一个只有一个子节点的节点
+        if (node.left == null) {
+            node = node.right;
+            return node;
+        } else if (node.right == null) {
+            node = node.left;
+            return node;
+        }
+        // 第三种情况---一个有两个子节点的节点
+        // 找出右侧最小的节点(为什么找右侧呢, 符合二叉搜索树规则), 替换当前节点, 然后删除最小节点
+        const minRightNode = _findMinNode(node.right);
+        // 删除节点
+        node.key = minRightNode.key;
+        // 删除找到的右侧最小节点
+        node.right = _removeNode(node.right, node.key);
+        return node;
+    }
+}
+
+function _findMinNode(node) {
+    if (node) {
+        while(node.left !== null) {
+            node = node.left;
+        }
+        return node;
+    }
+    return null;
+}
+
 const tree = new BinarySearchTree();
 tree.insert(11);
 tree.insert(7);
@@ -109,8 +160,10 @@ function printNodeKey(value) {
     console.log('[node key]', value);
 }
 
-// tree.inOrderTraverse(printNodeKey);
+tree.romove(7);
 
-console.log(tree.min());
-console.log(tree.max());
-console.log(tree.search(17));
+tree.inOrderTraverse(printNodeKey);
+
+// console.log(tree.min());
+// console.log(tree.max());
+// console.log(tree.search(8));

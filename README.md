@@ -92,7 +92,8 @@ tips: 在刷题过程中, 需要用到对应的算法, 来这儿看基础例子�
 |  冒泡排序 | [冒泡排序](./src/009.SortAndSearch/001.BubbleSort) |
 |  选择排序 | [选择排序](./src/009.SortAndSearch/002.SelectSort) |
 |  插入排序 | [插入排序](./src/009.SortAndSearch/003.InsertSort) |
-|  归并排序 | [归并排序](./src/009.SortAndSearch/004.MergeSort) |
+|  归并排序 | [归并排序](./src/009.SortAndSearch/004.MergeSort)  |
+|  快速排序 | [快速排序](./src/009.SortAndSearch/005.QuickSort)  |
 
 ### vscode leetcode 相关插件设置
 

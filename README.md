@@ -95,6 +95,11 @@ tips: 在刷题过程中, 需要用到对应的算法, 来这儿看基础例子�
 |  归并排序 | [归并排序](./src/009.SortAndSearch/004.MergeSort)  |
 |  快速排序 | [快速排序](./src/009.SortAndSearch/005.QuickSort)  |
 
+### 十. 哈希表
+| 题目类型 | 题目索引 |
+| :--: | :------: |
+| 求和操作 | [两数之和](./src/010.Hash/001.TwoSum) |
+
 ### vscode leetcode 相关插件设置
 
 1. leetcode.workspaceFolder, 自动代码路径设置

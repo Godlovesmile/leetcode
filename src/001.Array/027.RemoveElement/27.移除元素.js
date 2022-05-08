@@ -10,16 +10,33 @@
  * @param {number} val
  * @return {number}
  */
-var removeElement = function(nums, val) {
-  let index = 0;
+// 普通思路
+// var removeElement = function(nums, val) {
+//   let index = 0;
 
-  for (const i of nums) {
-    if (i !== val) {
-      nums[index++] = i;
+//   for (const i of nums) {
+//     if (i !== val) {
+//       nums[index++] = i;
+//     }
+//   }
+
+//   return index;
+// };
+
+// 双指针思路
+var removeElement = function(nums, val) {
+  let left = 0, right = nums.length - 1;
+
+  while (left <= right) {
+    if (nums[left] == val) {
+      nums[left] = nums[right];
+      right--;
+    } else {
+      left++;
     }
   }
 
-  return index;
+  return left;
 };
 // @lc code=end
 

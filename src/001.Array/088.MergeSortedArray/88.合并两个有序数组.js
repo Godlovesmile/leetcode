@@ -13,7 +13,18 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function(nums1, m, nums2, n) {
+  let j = -1
 
+  for (let i = m; i < m + n; i++) {
+    if (nums1[i] == 0) {
+      j++
+      nums1[i] = nums2[j]
+    }
+  }
+
+  nums1.sort((a, b) => a - b)
+
+  return nums1
 };
 // @lc code=end
 

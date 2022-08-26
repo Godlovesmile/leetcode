@@ -17,22 +17,41 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-// 递归
-var inorderTraversal = function(root) {
+// 递归, 隐式维护一个栈
+// var inorderTraversal = function(root) {
+//   const result = []
+
+//   const inorder = (root) => {
+//     if (!root) return
+
+//     inorder(root.left)
+//     result.push(root.val)
+//     inorder(root.right)
+//   }
+
+//   inorder(root)
+
+//   return result
+// };
+
+// 迭代, 需要显示维护一个栈
+const inorderTraversal = function(root) {
   const result = []
+  const satck = []
 
-  const inorder = (root) => {
-    if (!root) return
+  while (root || satck.length) {
+    while (root) {
+      satck.push(root)
+      root = root.left
+    }
 
-    inorder(root.left)
+    root = satck.pop()
     result.push(root.val)
-    inorder(root.right)
+    root = root.right
   }
 
-  inorder(root)
-
   return result
-};
+}
 
 // [1, 4, 2, 5, 3]
 // [4, 1, 5, 2, 3]

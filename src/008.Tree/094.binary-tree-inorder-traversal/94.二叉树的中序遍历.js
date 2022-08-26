@@ -17,8 +17,25 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
+// 递归
 var inorderTraversal = function(root) {
+  const result = []
 
+  const inorder = (root) => {
+    if (!root) return
+
+    inorder(root.left)
+    result.push(root.val)
+    inorder(root.right)
+  }
+
+  inorder(root)
+
+  return result
 };
+
+// [1, 4, 2, 5, 3]
+// [4, 1, 5, 2, 3]
+// [1, 4, 2, 6, 7, 5, 3]
 // @lc code=end
 

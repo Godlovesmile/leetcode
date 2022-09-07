@@ -17,8 +17,17 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function(root) {
+// 递归思想, 看树是否为镜像, 例如第 100 题思路, 判断是否为相同树的思想
+const check = (p, q) => {
+  if (!p && !q) return true
+  if (!p || !q) return false  
+  if (p.val != q.val) return false
 
+  return check(p.left, q.right) && check(p.right, q.left)
+}
+
+var isSymmetric = function(root) {
+  return check(root, root)
 };
 // @lc code=end
 

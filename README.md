@@ -31,7 +31,7 @@ tips: 在刷题过程中, 需要用到对应的算法, 来这儿看基础例子�
 | 题目分类 | 题目索引 |
 | :--:  | :-------:  |
 | 字符 | [520-检测大写字母(简单)](./src/002.String/520.DetectCapital) |
-| 回文串的定义 | [125-验证回文串(简单)](./src/002.String/125.ValidPalindrome) |
+| 回文串的定义 | [125-验证回文串(简单)](./src/002.String/125.ValidPalindrome) | [05-最长回文子串(中等)](./src/002.String/005.longest-palindromic-substring/) |
 | 公共前缀 | [14-最长公共前缀(简单)](./src/002.String/14.LongestCommonPrefix) |
 | 单词 | [434-字符串中的单词数(简单)](./src/002.String/434.NumberOfSegmentsInString)、[58-最后一个单词的长度](./src/002.String/058.LengthOfLastWord) |
 | 字符串的反转 | [344-反转字符串(简单)](./src/002.String/344.ReverseString)、[541-反转字符串2(简单)](./src/002.String/541.ReverseStringII)、[557-反转字符串中的单词III(简单)](./src/002.String/557.ReverseWordsInAStringIII)、[151-翻转字符串里的单词(中等)](./src/002.String/151.ReverseWordsInAString) |

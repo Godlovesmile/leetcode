@@ -30,33 +30,40 @@
 const longestPalindrome = (s) => {
   if (!s) return ''
 
-  let left = 0, right = 0, maxLen = 1
+  let left = 0, right = 0, maxLen = 0, len = 1, maxStart = 0
 
   for (let i = 0; i < s.length; i++) {
     left = --i
     right = ++i
 
     // 左扩展
-    while (left > 0 && s[i] === s[left]) {
+    while (left >= 0 && s[i] === s[left]) {
       left--
-      maxLen++
+      len++
     }
 
     // 右扩展
-    while (right > s.length && s[i] === s[right]) {
+    while (right < s.length && s[i] === s[right]) {
       right++
-      maxLen++
+      len++
     }
 
     // 左右相等判断
-    while (left > 0 && right < s.length && s[left] === s[right]) {
+    while (left >= 0 && right < s.length && s[left] === s[right]) {
       left--
       right++
-      maxLen += 2
+      len += 2
     }
-  }
 
-  return maxLen
+    if (len > maxLen) {
+      maxLen = len
+      maxStart = left
+    }
+
+    len = 1
+  }
+  
+  return s.slice(maxStart + 1, maxStart + maxLen)
 }
 // @lc code=end
 
